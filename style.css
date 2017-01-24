@@ -1,0 +1,160 @@
+/*
+ * Theme Name: CEAC Wavrin
+ * Theme URI:
+ * Description: Theme wordpress pour le CEAC de Wavrin
+ * Author:
+ * Author URI:
+ * Template: toivo-lite
+ * Version: 1.0.0
+ * License:
+ * License URI:
+ * Tags:
+ * Text Domain: ceacw-theme
+*/
+
+
+
+.child-pages-area, .featured-area, .format-audio .entry-media, .site-footer {
+  background-color: #d8d8d8
+}
+
+.breadcrumbs {
+  //display: none;
+}
+
+.breadcrumb-trail {
+  font-size: 0.6em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+}
+
+
+.content-area {
+ //margin-top: 10px;
+}
+
+.entry-inner {
+  padding: 10px;
+}
+
+.entry-header .entry-title, .front-page-area > .entry-title {
+ margin-bottom: 4px;
+}
+
+.entry-header .entry-title::after, .front-page-area > .entry-title::after {
+ //margin: 15px auto;
+ content: none;
+}
+
+.entry-thumbnail-cat-post, .inner-post {
+  float: left;
+}
+
+.inner-post::after {
+  clear: both;
+}
+
+.entry-thumbnail-cat {
+  z-index:3;
+  display:block;
+  position:absolute;
+  margin-top:2px;
+}
+
+.entry-thumbnail-post {
+  z-index:1;
+  display:block;
+  position: relative;
+}
+
+.entry-thumbnail-cat-post {
+  width: 30%;
+  padding: 5px;
+}
+
+.post-thumbnail {
+ margin-top:4px;
+}
+.inner-post {
+  width:70%;
+  margin-bottom: 0px;
+}
+
+.entry-content, .entry-footer {
+  max-width: 90%;
+}
+
+.entry {
+  margin-bottom: 10px;
+}
+
+.post-navigation {
+  display: none;
+}
+
+.entry-meta {
+  text-align: right;
+}
+
+.comment-meta, .entry-meta {
+  margin-bottom: 2px;
+  font-size: 0.6em;
+}
+
+.entry-content, .entry-summary, .page-content {
+  margin-top: 4px;
+}
+
+.home #content > .wrap {
+  padding-top: 21px;
+}
+#content > .wrap {
+    padding-bottom: 21px;
+}
+
+.toivo-read-more {
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+.entry-terms.category::before, .entry-terms.post_tag::before {
+  content : none;
+}
+
+a.more-link {
+  padding: 0.6em 0.8em;
+}
+
+.term a{
+    background-color: #9b1c51;
+    color: white;
+    font-family: raleway;
+    font-weight: bold;
+    height: 1.5em;
+    line-height: 1.5em;
+    padding: 0.3em;
+}
+
+.term {
+  margin-right: 4px;
+} 
+
+.term a:hover{
+  text-decoration: none;
+  color: #9b1c51;
+  background-color: transparent;
+}
+
+.term:last-child {
+  margin-right: 0px;
+}
+
+.layout-2c-l .wrap, .layout-2c-r .wrap, .layout-2c-l .default {
+  max-width: 1442px;
+  margin: 0 auto;
+}
+
+.widget_search .search-form {
+  margin-bottom: 0px;
+}
