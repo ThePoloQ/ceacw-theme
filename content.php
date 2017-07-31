@@ -9,7 +9,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php hybrid_attr( 'post' ); ?>>
 
         <?php if ( is_single() ) :
-          toivo_lite_post_thumbnail();
+          ceacw_post_thumbnail('medium');
         else :
         ?>
 	<div class="entry-thumbnail-cat-post">
@@ -30,9 +30,9 @@
 	
 			<?php
 				if ( is_single() ) :
-					the_title( '<h1 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '>', '</h1>' );
+					the_title( '<h3 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '>', '</h3>' );
 				else :
-					the_title( sprintf( '<h2 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '><a title="%s" href="%s" rel="bookmark">', esc_attr(get_the_title()), esc_url( get_permalink() ) ), '</a></h2>' );
+					the_title( sprintf( '<h3 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '><a title="%s" href="%s" rel="bookmark">', esc_attr(get_the_title()), esc_url( get_permalink() ) ), '</a></h3>' );
 				endif;
 			?>
 

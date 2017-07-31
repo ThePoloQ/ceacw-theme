@@ -1,6 +1,6 @@
 <?php
 
-function ceacw_post_thumbnail() {
+function ceacw_post_thumbnail($style = '') {
 	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 		return;
 	}
@@ -9,7 +9,7 @@ function ceacw_post_thumbnail() {
 	?>
 
 		<div class="post-thumbnail">
-			<?php the_post_thumbnail('', array( 'alt' => get_the_title() )); ?>
+			<?php the_post_thumbnail($style, array( 'alt' => get_the_title() )); ?>
 		</div><!-- .post-thumbnail -->
 
 	<?php else : ?>

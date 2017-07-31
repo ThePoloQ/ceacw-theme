@@ -16,11 +16,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?> <?php hybrid_attr( 'body' ); ?>>
+
 <div id="page" class="site">
 
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'toivo-lite' ); ?></a>
@@ -49,7 +51,7 @@
 		
 		<div class="wrap">
 		
-			<?php if ( function_exists( 'jetpack_the_site_logo' ) ) jetpack_the_site_logo(); ?>
+			<?php if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } ?>
 	
 			<div class="site-branding">
 			
@@ -59,16 +61,11 @@
 					//	get_template_part( 'loop', 'meta' ); // Loads the loop-meta.php template.
 						
 					//else:
-					
-						if ( is_front_page() || is_home() ) : ?>
-							<h1 id="site-title" class="site-title" <?php hybrid_attr( 'site-title' ); ?>>
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-							</h1>
-						<?php else : ?>
-                                                        <h1 id="site-title" class="site-title" <?php hybrid_attr( 'site-title' ); ?>>
-                                                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-                                                        </h1>						
-						<?php endif; ?>
+				?>
+						<h1 class="screen-reader-text"><?php bloginfo( 'description' ); ?></h1>
+                                                <div id="site-title" class="site-title" <?php hybrid_attr( 'site-title' ); ?>>
+                                                      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php echo esc_attr(bloginfo( 'name' )); ?>"><?php bloginfo( 'name' ); ?></a>
+                                                </div>						
 				
 						<div id="site-description" class="site-description" <?php hybrid_attr( 'site-description' ); ?>><?php bloginfo( 'description' ); ?></div>
 			
@@ -95,4 +92,5 @@
 				?>
 				
 				<div id="primary" class="content-area">
+					<h2 class="screen-reader-text">Content</h2>
 					<main id="main" class="site-main" role="main" <?php hybrid_attr( 'content' ); ?>>

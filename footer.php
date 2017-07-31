@@ -24,7 +24,11 @@
 		<div class="site-info">
 			&copy; 2016
 			<span class="sep"><?php echo _x( '&middot;', 'Separator in site info.', 'toivo-lite' ); ?></span>
-			Club d'Education et d'Activités Canines de Wavrin
+			<?php echo get_bloginfo( 'description' ); ?>
+			<br/>
+			<a href="<?php echo get_site_url().get_theme_mod('ceacw_contact_uri') ?>" title="contact">Contact</a>
+                        &nbsp;|&nbsp;
+			<a href="<?php echo get_site_url().get_theme_mod('ceacw_ml_uri'); ?>" title="Mentions Légales">Mentions Légales</a>
 		</div><!-- .site-info -->
 		
 	</footer><!-- #colophon -->
